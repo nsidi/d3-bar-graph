@@ -1,7 +1,7 @@
 # D3.js Bar Graph
 Using the D3.js library, i have created a simple bar graph to experiment with data and showcase it visually. 
 
-Bar Graph
+<p>Bar Graph</p>
 Let’s dive into creating a bar graph! For this example, I will be using the data provided by The Daily Bread Food Bank from the <a href="https://www1.toronto.ca/wps/portal/contentonly?vgnextoid=4de87768be338310VgnVCM1000003dd60f89RCRD&vgnextchannel=bc86e03bb8d1e310VgnVCM10000071d60f89RCRD"> City of Toronto website </a>. The data provided shows the number of visitors per month from 2009 to October 2015. In order to keep this example simple, I summed up the number of visitors for each year and left out 2015 (as this would have skewed the results for the lack of two months of data). As a result, this graph will show the total number of visitors for each year from 2009 to 2014. Keep in mind that I have simplified it so that we only work with two columns. 
 
 Here is the data: 
