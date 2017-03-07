@@ -18,6 +18,7 @@ Here is the data:
     </table> 
 
 <b>So how can we translate this data into a bar graph? Follow the steps below: </b>
+<br>
 <b>Save your data into .tsv file</b>
 <p>Copy and paste the above data into an Excel spreadsheet in the same format: two columns. Save this document as a Tab Delimited Text (.txt) file. In your documents folder, change the extension of this file to ".tsv" (tab separated values). </p>
 
