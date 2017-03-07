@@ -25,14 +25,38 @@ Create a folder for your project. In that folder, create a sub-folder and label 
 3.	Index.html
 In your project folder, create an index.html file using your favourite coding software. Your file should look like this (I am using the Brackets software in this case): 
 Most of our work will take place between the script tags. 
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="main.css"> 
+</head>
+
+<body>
+<!--HEADERS-->
+	<h1>Daily Bread Food Bank Visits Per Year</h1>
+    <h2>2009 to 2014</h2>
+
+    
+    
+    
+<!--SCRIPT -->
+<script src="d3/d3.js"></script>
+<script>
  
+</script>
+</body>
+</html>
 
 
 You will notice that I have linked the CSS to an external file. More often, than not, I have noticed that those who use D3.JS like to place it in one file. I like my code to clean and have thus placed it separately. 
+
 4.	Title your graph
 You can place the title of the graph where it states <!-- Headers -->. 
-<h1>Daily Bread Food Bank Visits Per Year</h1>
-<h2>2009 to 2014</h2>
+Daily Bread Food Bank Visits Per Year
+2009 to 2014
+
 5.	Declare dimensions and margins of the graph
 Let’s go ahead and declaring the margins and dimensions for the graph. We will call upon these variables soon!
 var margin = {top: 80, right: 20, bottom: 60, left: 300},
@@ -120,6 +144,18 @@ The following code will then add the x and y axis to the group.
        .call(d3.axisLeft(y));});
 
 Here is the code to for your CSS. 
+               .bar { 
+                   fill: steelblue; 
+               }
+
+               .bar:hover {
+                 fill: brown;
+               }
+
+               h1, h2 {
+                   text-align: center;
+               }
+
 
 
 
