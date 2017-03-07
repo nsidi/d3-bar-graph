@@ -7,8 +7,8 @@ Using the D3.js library, i have created a simple bar graph to experiment with da
 Here is the data: 
  <table style="width:100%">
   <tr><th>Year</th><th>Visits</th></tr>
-    <tr><td>2009</td><td>815200</td></tr>
-    <tr><td>2010</td><td>860200</td></tr>
+    <tr><td>2009</td><td>860200</td></tr>
+    <tr><td>2010</td><td>815200</td></tr>
     <tr><td>2011</td><td>784200</td></tr>
     <tr><td>2012</td><td>786500</td></tr>
     <tr><td>2013</td><td>715000</td></tr>
