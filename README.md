@@ -5,13 +5,28 @@ Using the D3.js library, i have created a simple bar graph to experiment with da
 <p>Let’s dive into creating a bar graph! For this example, I will be using the data provided by The Daily Bread Food Bank from the <a href="https://www1.toronto.ca/wps/portal/contentonly?vgnextoid=4de87768be338310VgnVCM1000003dd60f89RCRD&vgnextchannel=bc86e03bb8d1e310VgnVCM10000071d60f89RCRD"> City of Toronto website </a>. The data provided shows the number of visitors per month from 2009 to October 2015. In order to keep this example simple, I summed up the number of visitors for each year and left out 2015 (as this would have skewed the results for the lack of two months of data). As a result, this graph will show the total number of visitors for each year from 2009 to 2014. Keep in mind that I have simplified it so that we only work with two columns. </p>
 
 Here is the data: 
-Year	Visits
-2009	860,200
-2010	815,200
-2011	784,200
-2012	786,500
-2013	715,000
-2014	716,970
+ <table style="width:100%">
+  <tr>
+    <th>Year</th>
+    <th>Visits</th>
+  </tr>
+  <tr>
+    <td>2009</td>
+    <td>2010</td>
+    <td>2011</td>
+    <td>2012</td>
+    <td>2013</td>
+    <td>2014</td>
+  </tr>
+  <tr>
+    <td>815200</td>
+    <td>860200</td>
+    <td>784200</td>
+    <td>786500</td>
+    <td>715000</td>
+    <td>716970</td>
+  </tr>
+</table> 
 
 <b>So how can we translate this data into a bar graph? Follow the steps below: </b>
 <b>Save your data into .tsv file</b>
