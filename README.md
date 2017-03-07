@@ -6,27 +6,14 @@ Using the D3.js library, i have created a simple bar graph to experiment with da
 
 Here is the data: 
  <table style="width:100%">
-  <tr>
-    <th>Year</th>
-    <th>Visits</th>
-  </tr>
-  <tr>
-    <td>2009</td>
-    <td>2010</td>
-    <td>2011</td>
-    <td>2012</td>
-    <td>2013</td>
-    <td>2014</td>
-  </tr>
-  <tr>
-    <td>815200</td>
-    <td>860200</td>
-    <td>784200</td>
-    <td>786500</td>
-    <td>715000</td>
-    <td>716970</td>
-  </tr>
-</table> 
+  <tr><th>Year</th><th>Visits</th></tr>
+    <tr><td>2009</td><td>815200</td></tr>
+    <tr><td>2010</td><td>860200</td></tr>
+    <tr><td>2011</td><td>784200</td></tr>
+    <tr><td>2012</td><td>786500</td></tr>
+    <tr><td>2013</td><td>715000</td></tr>
+    <tr><td>2014</td><td>716970</td></tr>
+    </table> 
 
 <b>So how can we translate this data into a bar graph? Follow the steps below: </b>
 <b>Save your data into .tsv file</b>
