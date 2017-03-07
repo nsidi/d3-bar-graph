@@ -14,15 +14,15 @@ Year	Visits
 2014	716,970
 
 So how can we translate this data into a bar graph? Follow the steps below: 
-1. Save your data into .tsv file
+<b>Save your data into .tsv file</b>
 Copy and paste the above data into an Excel spreadsheet in the same format: two columns. Save this document as a Tab Delimited Text (.txt) file. In your documents folder, change the extension of this file to ".tsv" (tab separated values). 
 
 You may also want to check if the .tsv file does not contain data in string format – as this did happen to me. Remove the quotations around the visit numbers. Also, remove the commas that are placed in the number values. This was also another area that gave me errors in the console because it was not able to read the comma as part of the number. 
 
-2. Set up your folder
+<b>Set up your folder</b>
 Create a folder for your project. In that folder, create a sub-folder and label is “d3”. This is where you will place the latest version of d3.JS (here is the present link – which is version 4: https://d3js.org/)  
 
-3. Set up your Index.html
+<b>Set up your Index.html</b>
 In your project folder, create an index.html file using your favourite coding software. Your file should look like this (I am using the Brackets software in this case): 
 Most of our work will take place between the script tags. 
 
@@ -49,19 +49,19 @@ Most of our work will take place between the script tags.
 
 You will notice that I have linked the CSS to an external file. More often, than not, I have noticed that those who use D3.JS like to place it in one file. I like my code to clean and have thus placed it separately. 
 
-4. Title your graph
+<b>Title your graph</b>
 You can place the title of the graph where it states <!-- Headers -->. 
 Daily Bread Food Bank Visits Per Year
 2009 to 2014
 
-5. Declare dimensions and margins of the graph
+<b>Declare dimensions and margins of the graph</b>
 Let’s go ahead and declaring the margins and dimensions for the graph. We will call upon these variables soon!
 
 		var margin = {top: 80, right: 20, bottom: 60, left: 300},
 		width = 960 - margin.left - margin.right,
 		height = 500 - margin.top - margin.bottom;
 
-6. Next thing we want to set up is the range for x and y. 
+<b>Next thing we want to set up is the range for x and y. </b>
 In order to set up the range for the x-axis, we will use a function called d3.scaleBand(). This will divide up the space evenly into bands across the range. This function is usually used for bar graphs. Using the chaining method, and the variables we declared earlier, we will make this scale band go from 0 to the end of the width. Here is the code: 
 
 		var x = d3.scaleBand() //divides up the space into bands across the range
@@ -73,7 +73,8 @@ As for the y-axis, the we will use scaleLinear, instead of scale Band. The scale
 		var y = d3.scaleLinear() 
 		.range([height, 0])
 
-7. We now want to add a Scalable Vector Graphic (SVG) object to the body. The SVG will help us create the actual bars for the graph. We would then append this to the body and give it attributes (width, height and margins – which, as you will recall, were already declared above.) So all we would have to do is call those variables, as we do not want to hard-wire them. 
+<b>We now want to add a Scalable Vector Graphic (SVG) object to the body. </b>
+The SVG will help us create the actual bars for the graph. We would then append this to the body and give it attributes (width, height and margins – which, as you will recall, were already declared above.) So all we would have to do is call those variables, as we do not want to hard-wire them. 
 
 		var svg = d3.select("body").append("svg")
 		.attr("width", width + margin.left + margin.right)
@@ -85,7 +86,7 @@ In that same chain, we will append a group element and label it “g”. The gro
 		.append("g")
 		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-8. Time to grab the data! 
+<b>Time to grab the data! </b>
 Data can be inputted multiple ways (array of numbers, strings, objects, JSON, TSV, CSV etc.). Remember that .TSV file you saved your data in earlier? Time to get that running! 
 
 This piece of code is requesting for the data from our .tsv file: 
@@ -100,8 +101,8 @@ We now need a piece of code that ensures that the data is recognized as a number
 		d.visits = +d.visits;
 		});
 
-9. Let’s now set up the scale ranges for x and y. Using the data we just inputted, we can implement it into our scale. 
-For the x-domain, we will extract the data from our file and map it out. In this case, our x-domain will include “years”. It will therefore display all the data in the “years” column. 
+<b>Let’s now set up the scale ranges for x and y. </b>
+Using the data we just inputted, we can implement it into our scale. For the x-domain, we will extract the data from our file and map it out. In this case, our x-domain will include “years”. It will therefore display all the data in the “years” column. 
 
 		x.domain(data.map(function(d) { 
 		return d.year; 
@@ -113,7 +114,7 @@ As for the y-domain, we will make use of data from the “visits” column. In t
 		return d.visits; 
 		})]);
 
-10. Are we missing anything? Yes! The bars for our graph! We can use SVG to create them. 
+<b> Are we missing anything? Yes! The bars for our graph! We can use SVG to create them. </b>
 
 This may look odd because we will first start out by selecting all classes named “bar”, which do not exist yet! 
 
@@ -151,7 +152,7 @@ The following code will then add the x and y axis to the group.
 		    svg.append("g")
 		       .call(d3.axisLeft(y));});
 
-Here is the code to for your CSS. 
+<b>Here is the code to for your CSS. </b>
 
                .bar { 
                    fill: steelblue; 
@@ -165,7 +166,7 @@ Here is the code to for your CSS.
                    text-align: center;
                }
 
-Here is the full code: 
+<b>Here is the full code: </b>
 
 		<!DOCTYPE html>
 		<html>
