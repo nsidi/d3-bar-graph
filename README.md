@@ -1,5 +1,5 @@
 # D3.js Bar Graph
-Using the D3.js library, i have created a simple bar graph to experiment with data and showcase it visually. 
+Using the D3.js library, I have created a simple bar graph to experiment with data and showcase it visually. 
 
 <img src="graph.png">
 
